@@ -10,6 +10,8 @@ import { FaqComponent } from './components/home/faq/faq.component';
 import { CtaComponent } from './components/home/cta/cta.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CaraComponent } from './components/home/cara/cara.component';
+import { Cta2Component } from './components/home/cta2/cta2.component';
+import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { CaraComponent } from './components/home/cara/cara.component';
     FaqComponent,
     CtaComponent,
     HomeComponent,
-    CaraComponent
+    CaraComponent,
+    Cta2Component,
+    TestimonialsComponent,
+   
   ],
   imports: [
     BrowserModule,
