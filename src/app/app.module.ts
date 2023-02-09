@@ -10,6 +10,10 @@ import { FaqComponent } from './components/home/faq/faq.component';
 import { CtaComponent } from './components/home/cta/cta.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CaraComponent } from './components/home/cara/cara.component';
+import { FormComponent } from './components/login/form/form.component';
+import { UnderFormComponent } from './components/login/under-form/under-form.component';
+import { LeftDescriptionComponent } from './components/login/left-description/left-description.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { CaraComponent } from './components/home/cara/cara.component';
     FaqComponent,
     CtaComponent,
     HomeComponent,
-    CaraComponent
+    CaraComponent,
+    FormComponent,
+    UnderFormComponent,
+    LeftDescriptionComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
