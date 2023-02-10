@@ -16,6 +16,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { Cta2Component } from './components/home/cta2/cta2.component';
 import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
 import { PicLoginComponent } from './components/login/pic-login/pic-login.component';
+import { RegistrationFormComponent } from './components/signUp/registration-form/registration-form.component';
+import { LeftDescriptionComponent } from './components/signUp/left-description/left-description.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { PicLoginComponent } from './components/login/pic-login/pic-login.compon
     Cta2Component,
     TestimonialsComponent,
     PicLoginComponent,
+    RegistrationFormComponent,
+    LeftDescriptionComponent,
+    SignUpComponent,
    
   ],
   imports: [
