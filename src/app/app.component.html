@@ -1,15 +1,14 @@
 
 <ng-container *ngIf="!isLoginRoute">
-    <section class="bg-heroColor" >
-        <app-header></app-header>
-    </section>
+  <section >
+    <app-header></app-header>
+  </section>
 </ng-container>
 
-<router-outlet ></router-outlet>
-  
+<router-outlet></router-outlet>
+
 <ng-container *ngIf="!isLoginRoute">
-    <section >
-        <app-footer></app-footer>
-    </section>
+  <section >
+    <app-footer></app-footer>
+  </section>
 </ng-container>
-

@@ -12,8 +12,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { CaraComponent } from './components/home/cara/cara.component';
 import { FormComponent } from './components/login/form/form.component';
 import { UnderFormComponent } from './components/login/under-form/under-form.component';
-import { LeftDescriptionComponent } from './components/login/left-description/left-description.component';
 import { LoginComponent } from './pages/login/login.component';
+import { Cta2Component } from './components/home/cta2/cta2.component';
+import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
+import { PicLoginComponent } from './components/login/pic-login/pic-login.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,11 @@ import { LoginComponent } from './pages/login/login.component';
     CaraComponent,
     FormComponent,
     UnderFormComponent,
-    LeftDescriptionComponent,
-    LoginComponent
+    LoginComponent,
+    Cta2Component,
+    TestimonialsComponent,
+    PicLoginComponent,
+   
   ],
   imports: [
     BrowserModule,
