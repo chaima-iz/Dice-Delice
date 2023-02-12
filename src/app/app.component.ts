@@ -7,12 +7,12 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isLoginRoute = false;
+  isLoginOrSignupRoute = false;
   title = 'projetWebb';
   constructor(private router : Router){
     this.router.events.subscribe((event)=>{
       if(event instanceof NavigationEnd){
-        this.isLoginRoute = this.router.url ==='/login';
+        this.isLoginOrSignupRoute = this.router.url ==='/login' || this.router.url === '/signUp';
       }
     })
   }
