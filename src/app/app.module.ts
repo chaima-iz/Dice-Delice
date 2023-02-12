@@ -25,6 +25,7 @@ import { SearchBarComponent } from './components/myReservations/search-bar/searc
 import { LeftDescriptionComponent } from './components/signUp/left-description/left-description.component';
 import { RegistrationFormComponent } from './components/signUp/registration-form/registration-form.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { ReservationComponent } from './pages/reservation/reservation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     SearchBarComponent,
     LeftDescriptionComponent,
     RegistrationFormComponent,
-    SignUpComponent
+    SignUpComponent,
+    ReservationComponent
    
   ],
   imports: [
