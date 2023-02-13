@@ -26,6 +26,7 @@ import { LeftDescriptionComponent } from './components/signUp/left-description/l
 import { RegistrationFormComponent } from './components/signUp/registration-form/registration-form.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,8 @@ import { ReservationComponent } from './pages/reservation/reservation.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

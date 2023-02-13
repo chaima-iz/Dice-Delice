@@ -1,101 +1,97 @@
 
-<div class="bg-[#FCF8F5] mx-auto px-4 max-w-full sm:px-6 lg:px-8">
-    <div class=" mb-4   lg:ml-64">
-      <h1 class="text-2xl font-bold pt-12 text-orange-700">Réservez votre place</h1>
-    </div>
-    <form class="lg:px-64 pt-6 pb-8">
-      <div class="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="date">
-            Date de réservation
-          </label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" type="date" placeholder="YYYY-MM-DD">
-        </div>
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="start-time">
-            Heure de début
-          </label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="start-time" type="time" placeholder="HH:MM">
-        </div>
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="end-time">
-            Heure de fin
-          </label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="end-time" type="time" placeholder="HH:MM">
-        </div>
-        <div>
-          <label for="nb_persons" class="block text-gray-700 font-medium mb-2">Nombre de personnes:</label>
-          <input id="nb_persons" type="number" name="nb_persons" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" min="1" max="10" placeholder="Le nombre de personnes" required>
-        </div>
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="game">
-            Jeu
-          </label>
-          <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="game">
-            <option value="">Sélectionnez un jeu</option>
-            <option value="jeu1">Jeu 1</option>
-            <option value="jeu2">Jeu 2</option>
-            <option value="jeu3">Jeu 3</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="payment">
-            Modalités de paiement
-          </label>
-          <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="payment">
-            <option value="">Sélectionnez une option de paiement</option>
-            <option value="visa">Visa</option>
-            <option value="mastercard">Mastercard</option>
-            <option value="paypal">PayPal</option>
-            <option value="cash">Cash</option>
-          </select>
-        </div>
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700 font-medium mb-2" for="instructions">
-          Instructions spéciales
+<div class="bg-white mx-auto px-4 max-w-full sm:px-6 lg:px-8 shadow-md">
+  <div class=" mb-4   lg:ml-64">
+    <h1 class="text-2xl font-bold pt-12 text-orange-700">Book your place</h1>
+  </div>
+  <form class="lg:px-64 pt-6 pb-8">
+    <div class="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div>
+        <label class="block text-gray-700 font-medium mb-2" for="date">
+          Reservation date
         </label>
-        <textarea
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="instructions" placeholder="Ajoutez des instructions supplémentaires..."></textarea>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" name="reservation_date" [(ngModel)]="reservation_date" type="date" placeholder="YYYY-MM-DD">
       </div>
-      <!-- Cancel Policy Modal -->
-  <div id="cancel-policy-modal" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="cancel-policy-modal" role="dialog" aria-modal="true">
-    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-      <!-- Background overlay -->
-      <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-  
-      <!-- Modal panel -->
-      <div class="modal-dialog inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="document">
-        <!-- Modal header -->
-        <div class="bg-orange-500 px-4 py-3 sm:px-6">
-          <h3 class="text-lg leading-6 font-medium text-white" id="cancel-policy-modal-label">Politique d'annulation</h3>
-          <button class="text-white float-right hover:text-gray-200 focus:outline-none focus:text-gray-200 transition duration-150 ease-in-out" type="button" data-dismiss="modal" aria-label="Close">
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" role="img" xmlns="http://www.w3.org/2000/svg">
-              <title>Close</title>
-              <path fill-rule="evenodd" d="M14.348 5.652a.5.5 0 010 .707L10.707 10l3.641 3.641a.5.5 0 11-.707.707L10 10.707l-3.641 3.641a.5.5 0 11-.707-.707L9.293 10 5.652 6.359a.5.5 0 01.707-.707L10 9.293l3.641-3.641a.5.5 0 01.707 0z" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-  
-        <!-- Modal content -->
-        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-          <p class="mb-4">Nous comprenons que des changements de plan peuvent survenir et nous sommes heureux d'annuler votre réservation si nécessaire. Cependant, nous vous demandons de nous avertir dès que possible si vous avez besoin d'annuler. Si vous annulez votre réservation au moins 24 heures avant l'heure de réservation, aucuns frais ne seront facturés. Si vous annulez moins de 24 heures avant l'heure de réservation, nous nous réservons le droit de facturer des frais d'annulation équivalents à 50% du coût de la réservation. Si vous ne vous présentez pas à votre réservation sans annulation préalable, nous facturerons des frais d'annulation équivalents à 100% du coût de la réservation.</p>
-        </div>
+      <div>
+        <label class="block text-gray-700 font-medium mb-2" for="start-time">
+          Start time
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="start_time" name="start_time" [(ngModel)]="start_time" type="time" placeholder="HH:MM">
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium mb-2" for="end-time">
+          End time
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="end_time" name="end_time" [(ngModel)]="end_time" type="time" placeholder="HH:MM">
+      </div>
+      <div>
+        <div class="w-full"></div>
+        <label class="block text-gray-700 font-medium mb-2" for="game">
+          Game
+        </label>
+        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="game" name="game" [(ngModel)]="game">
+          <option value="">Select a game</option>
+          <option value="jeu1">Game 1</option>
+          <option value="jeu2">Game 2</option>
+          <option value="jeu3">Game 3</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium mb-2" for="payment">
+          Payment terms
+        </label>
+        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="payement" name="payement"  [(ngModel)]="payement">
+          <option value="">Select a payment option</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="paypal">PayPal</option>
+          <option value="cash">Cash</option>
+        </select>
       </div>
     </div>
-  </div>
-  
-  
-  
-  <div class="mb-4">
-    <a href="#" class="text-orange-700 underline" data-toggle="modal" data-target="#cancel-policy-modal" onclick="event.preventDefault(); document.getElementById('cancel-policy-modal').classList.remove('hidden');">Politique d'annulation</a>
-  </div>
-      <div class="mb-4 text-right">
-        <button class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4  font-medium rounded focus:outline-none focus:shadow-outline" type="button">
-          Réserver
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2" for="instructions">
+          Special Instructions
+      </label>
+      <textarea
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="instructions" name="instructions" [(ngModel)]="instructions" placeholder="Add additional instructions..."></textarea>
+    </div>
+    <!-- Cancel Policy Modal -->
+<div id="cancel-policy-modal" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="cancel-policy-modal" role="dialog" aria-modal="true">
+  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <!-- Background overlay -->
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+    <!-- Modal panel -->
+    <div class="modal-dialog inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="document">
+      <!-- Modal header -->
+      <div class="bg-orange-500 px-4 py-3 sm:px-6">
+        <h3 class="text-lg leading-6 font-medium text-white" id="cancel-policy-modal-label">Cancellation Policy</h3>
+        <button class="text-white float-right hover:text-gray-200 focus:outline-none focus:text-gray-200 transition duration-150 ease-in-out" type="button" data-dismiss="modal" aria-label="Close">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" role="img" xmlns="http://www.w3.org/2000/svg">
+            <title>Close</title>
+            <path fill-rule="evenodd" d="M14.348 5.652a.5.5 0 010 .707L10.707 10l3.641 3.641a.5.5 0 11-.707.707L10 10.707l-3.641 3.641a.5.5 0 11-.707-.707L9.293 10 5.652 6.359a.5.5 0 01.707-.707L10 9.293l3.641-3.641a.5.5 0 01.707 0z" clip-rule="evenodd"></path>
+          </svg>
         </button>
       </div>
-    </form>
+
+      <!-- Modal content -->
+      <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+        <p class="mb-4">We understand that plan changes may occur and we are happy to cancel your reservation if necessary. However, we ask that you notify us as soon as possible if you need to cancel. If you cancel your reservation at least 24 hours before the reservation time, no fee will be charged. If you cancel less than 24 hours before the reservation time, we reserve the right to charge a cancellation fee equivalent to 50% of the cost of the reservation. If you do not show up for your reservation without prior cancellation, we will charge a cancellation fee equivalent to 100% of the cost of the reservation.</p>
+      </div>
+    </div>
   </div>
-  
+</div>
+
+
+
+<div class="mb-4">
+  <a href="#" class="text-orange-700 underline" data-toggle="modal" data-target="#cancel-policy-modal" onclick="event.preventDefault(); document.getElementById('cancel-policy-modal').classList.remove('hidden');">Cancellation Policy</a>
+</div>
+    <div class="mb-4 text-right">
+      <button (click)="addReservation()" class="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4  font-medium rounded focus:outline-none focus:shadow-outline" type="button">
+        Book
+      </button>
+    </div>
+  </form>
+</div>
