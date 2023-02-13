@@ -20,6 +20,7 @@ export class FormComponent implements OnInit{
     this.loginservice.login(this.email , this.password)
     .subscribe(res=>{
       if(res.user){
+        localStorage.setItem("user" , JSON.stringify(res.user))
         localStorage.setItem("logged_in" , "true");
         this.router.navigate(['/'])
       }
