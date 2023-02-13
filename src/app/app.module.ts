@@ -27,6 +27,7 @@ import { RegistrationFormComponent } from './components/signUp/registration-form
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
