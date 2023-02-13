@@ -9,10 +9,11 @@ import { GameService } from 'src/app/services/gameService/game.service';
 export class GamesComponent implements OnInit{
   games:any;
 
+
   constructor(private gameService: GameService) { }
 
   ngOnInit(): void {
-    this.getGames()
+    this.getGames();
   }
   getGames() {
     this.gameService.listGames().subscribe((games) => {

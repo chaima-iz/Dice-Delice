@@ -1,5 +1,37 @@
 <section class="">
-<div class="mx-10 pt-[10px] md:mx-24 ">
-    <p>list-of-games works!</p>
-</div>
+    <div class="m-10 pt-[10px] md:mx-24">
+        <!-- <h1 *ngFor="let game of games">{{ game.id }}</h1> -->
+        <div class="flex gap-4 flex-wrap items-center justify-between">
+            <div *ngFor="let game of games" class="w-[300px] bg-white border border-gray-200 rounded-lg shadow ">
+                <a href="#">
+                    <img class="rounded-t-lg" src="/assets/imgs/picLogin.png" alt="game" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900">
+                            {{ game.name }}
+                        </h5>
+                    </a>
+                    <div class="mb-3 space-x-2">
+                        <span
+                            class="capitalize inline-flex items-center justify-center px-3  text-md font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">
+                            {{game.category}}
+                        </span>
+                        <span
+                            class="capitalize inline-flex items-center justify-center px-3  text-md font-medium text-gray-800 bg-[#fff0e4]  rounded-full dark:bg-gray-700 dark:text-gray-300">
+                            {{game.difficulty}}
+                        </span>
+                        
+                    </div>
+                    <div class="flex justify-end w-full">
+                       <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#D76823] rounded-lg">
+                        More
+                    </a> 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\GameResource;
 use App\Models\Game;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,7 @@ class GameController extends Controller
     {
         $games = Game::all();
         return response()->json($games);
+    //    return GameResource::collection(Game::all());
     }
 
    
