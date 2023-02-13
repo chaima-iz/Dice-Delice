@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { DataService } from '../../services/data.service';
 @Component({
   selector: 'app-reservation',
   templateUrl: './reservation.component.html',
@@ -13,8 +13,26 @@ export class ReservationComponent {
   payement:any;
   instructions:any;
   
+  constructor(private dataService: DataService) {}
+  
   addReservation() {
-    console.log(this.reservation_date,this.start_time,this.end_time,this.game
-      ,this.payement,this.instructions);
+    const reservationData = {
+      reservation_date: this.reservation_date,
+      start_time: this.start_time,
+      end_time: this.end_time,
+      game: this.game,
+      payement: this.payement,
+      instructions: this.instructions
+    };
+    
+    this.dataService.addReservation(reservationData)
+      .subscribe(
+        data => {
+          console.log('it works');
+        },
+        error => {
+          console.log('this doesnt work');
+        }
+      );
   }
 }
