@@ -28,6 +28,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { GameDetailsComponent } from './components/Games/game-details/game-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     LeftDescriptionComponent,
     RegistrationFormComponent,
     SignUpComponent,
-    ReservationComponent
+    ReservationComponent,
+    GameDetailsComponent
    
   ],
   imports: [
