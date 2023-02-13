@@ -14,7 +14,7 @@ export class FormComponent implements OnInit{
   constructor(private loginservice : LoginServiceService , private router:Router){ }
   
   ngOnInit(): void {
-    localStorage.setItem("logged_in" , "false");
+    // localStorage.setItem("logged_in" , "false");
   }
   submit(){
     this.loginservice.login(this.email , this.password)

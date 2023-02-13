@@ -9,8 +9,7 @@ import { ReservationComponent } from './pages/reservation/reservation.component'
 import { AuthGuard } from './guardes/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'games', component: GamesComponent },
   { path: 'myreservations', component: MyReservationsComponent ,canActivate: [AuthGuard]},
