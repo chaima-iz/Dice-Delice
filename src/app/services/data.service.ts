@@ -13,4 +13,10 @@ export class DataService {
   addReservation(reservationData: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/reservation`, reservationData);
   }
+
+  listReservations(): Observable<any> {
+    return this.http.get<any>(this.baseUrl + '/reservations');
+  }
+  
+
 }

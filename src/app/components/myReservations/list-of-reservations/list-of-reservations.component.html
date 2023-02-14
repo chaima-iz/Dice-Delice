@@ -4,141 +4,49 @@
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-[#D76823]">
                     <tr>
-                        
                         <th scope="col" class="px-6 py-3 text-white">
-                            Product name
+                            Reservation date
                         </th>
                         <th scope="col" class="px-6 py-3 text-white">
-                            Color
+                            Start
                         </th>
                         <th scope="col" class="px-6 py-3 text-white">
-                            Category
+                            End
                         </th>
                         <th scope="col" class="px-6 py-3 text-white">
-                            Price
+                            Game
                         </th>
                         <th scope="col" class="px-6 py-3 text-white">
-                            Action
+                            Payement
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-white">
+                            Instructions
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr
+                    <tr *ngFor="let reservation of reservations"
                         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                       
+
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Apple MacBook Pro 17"
+                            {{reservation.reservation_date}}
                         </th>
                         <td class="px-6 py-4">
-                            Sliver
+                            {{reservation.start_time}}
                         </td>
                         <td class="px-6 py-4">
-                            Laptop
+                            {{reservation.end_time}}
                         </td>
                         <td class="px-6 py-4">
-                            $2999
+                           {{reservation.game}}
                         </td>
                         <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            {{reservation.payement}}
                         </td>
+                        <td class="px-6 py-4">
+                            {{reservation.instructions}} </td>
                     </tr>
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Microsoft Surface Pro
-                        </th>
-                        <td class="px-6 py-4">
-                            White
-                        </td>
-                        <td class="px-6 py-4">
-                            Laptop PC
-                        </td>
-                        <td class="px-6 py-4">
-                            $1999
-                        </td>
-                        <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                       
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Magic Mouse 2
-                        </th>
-                        <td class="px-6 py-4">
-                            Black
-                        </td>
-                        <td class="px-6 py-4">
-                            Accessories
-                        </td>
-                        <td class="px-6 py-4">
-                            $99
-                        </td>
-                        <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Apple Watch
-                        </th>
-                        <td class="px-6 py-4">
-                            Black
-                        </td>
-                        <td class="px-6 py-4">
-                            Watches
-                        </td>
-                        <td class="px-6 py-4">
-                            $199
-                        </td>
-                        <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                       
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Apple iMac
-                        </th>
-                        <td class="px-6 py-4">
-                            Silver
-                        </td>
-                        <td class="px-6 py-4">
-                            PC
-                        </td>
-                        <td class="px-6 py-4">
-                            $2999
-                        </td>
-                        <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Apple AirPods
-                        </th>
-                        <td class="px-6 py-4">
-                            White
-                        </td>
-                        <td class="px-6 py-4">
-                            Accessories
-                        </td>
-                        <td class="px-6 py-4">
-                            $399
-                        </td>
-                        <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                        </td>
-                    </tr>
-                   
-                   
+
                 </tbody>
             </table>
             <nav class="flex items-center justify-end pt-4" aria-label="Table navigation">
@@ -155,7 +63,7 @@
                             </svg>
                         </a>
                     </li>
-                  
+
                     <li>
                         <a href="#"
                             class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">

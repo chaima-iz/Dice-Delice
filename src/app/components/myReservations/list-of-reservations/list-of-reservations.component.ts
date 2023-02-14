@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-list-of-reservations',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-of-reservations.component.css']
 })
 export class ListOfReservationsComponent {
-
+  @Input() reservations!:any[];
 }

@@ -31,4 +31,10 @@ class ReservationController extends Controller
         return response($reservation , 201);
         
     }
+
+    public function getReservations()
+    {
+        $reservations = Reservation::all();
+        return response()->json($reservations);
+    }
 }

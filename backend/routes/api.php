@@ -25,3 +25,4 @@ Route::post("login",[UserController::class , 'login']);
 Route::post("signUp",[UserController::class , 'signUp']);
 Route::post("reservation",[ReservationController::class , 'store']);
 Route::get('/games',[GameController::class,'getGames']);
+Route::get('/reservations',[ReservationController::class,'getReservations']);
