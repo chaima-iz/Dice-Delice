@@ -14,16 +14,21 @@ export class FormComponent implements OnInit{
   constructor(private loginservice : LoginServiceService , private router:Router){ }
   
   ngOnInit(): void {
-    localStorage.setItem("logged_in" , "false");
+    // localStorage.setItem("logged_in" , "false");
   }
   submit(){
     this.loginservice.login(this.email , this.password)
-    .subscribe(res=>{
-      if(res.user){
-        localStorage.setItem("user" , JSON.stringify(res.user))
-        localStorage.setItem("logged_in" , "true");
-        this.router.navigate(['/'])
+    .subscribe(
+      res=>{
+        if(res.user){
+          localStorage.setItem("user" , JSON.stringify(res.user))
+          localStorage.setItem("logged_in" , "true");
+          this.router.navigate(['/'])
+        }
+      },
+      error=>{
+        localStorage.setItem("error" , "true");
       }
-    });
+    );
   }
 }
