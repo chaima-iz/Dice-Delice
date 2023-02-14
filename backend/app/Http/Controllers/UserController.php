@@ -30,17 +30,17 @@ class UserController extends Controller
     }
     function signUp(Request $request){
         $userData = $request->validate([
-            "firstName" => ["required" , "string"],
-            "lastName" => ["required" , "string"],
-            "gender" => ["required" , "string"],
+            "firstName" => ["required"],
+            "lastName" => ["required"],
+            "gender" => ["required"],
             "dateBirth" => ["required"],
             "address" => ["required"],
-            "city" => ["required" , "string"],
-            "username" => ["required" , "string"],
-            "phone" => ["required" , "string"],
-            "email" => ["required" , "email"],
-            "password" => ["required" , "string" , "confirmed"],
-            "picture" => ["required" , "string" ]
+            "city" => ["required"],
+            "username" => ["required"],
+            "phone" => ["required"],
+            "email" => ["required"],
+            "password" => ["required"],
+            "picture" => ["required" ]
         ]);
         $user = User::create([
             "firstName" => $userData["firstName"],
