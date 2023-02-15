@@ -8,6 +8,7 @@ import { GameService } from 'src/app/services/gameService/game.service';
 })
 export class GamesComponent implements OnInit{
   games:any;
+  searchText:string="";
 
 
   constructor(private gameService: GameService) { }
@@ -20,5 +21,11 @@ export class GamesComponent implements OnInit{
       this.games = games;
       // console.log(games);
     });
+  }
+
+  showMsg(text: any)
+  {
+    // console.log(text);
+    this.searchText=text;
   }
 }

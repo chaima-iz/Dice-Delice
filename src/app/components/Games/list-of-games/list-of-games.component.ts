@@ -8,4 +8,6 @@ import { Component,Input } from '@angular/core';
 export class ListOfGamesComponent {
 
   @Input() games!:any[];
+  @Input() searchText:string="";
+  p:number=1;
 }

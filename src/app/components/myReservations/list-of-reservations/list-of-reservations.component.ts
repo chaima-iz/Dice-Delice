@@ -7,4 +7,6 @@ import { Component,Input } from '@angular/core';
 })
 export class ListOfReservationsComponent {
   @Input() reservations!:any[];
+  p: number = 1;
+
 }
