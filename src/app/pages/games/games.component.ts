@@ -25,7 +25,6 @@ export class GamesComponent implements OnInit{
 
   showMsg(text: any)
   {
-    // console.log(text);
     this.searchText=text;
   }
 }

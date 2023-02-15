@@ -7,7 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class SearchbarComponent {
 
-  searchText:string="h";
+  searchText:string="";
   @Output() OnChangeSearchText:EventEmitter<string>=new EventEmitter<string>();
 
   OnChnageSearchText()
