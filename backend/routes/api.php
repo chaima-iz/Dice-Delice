@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -31,3 +32,5 @@ Route::post('/logout', function (Request $request) {
     // or
      $request->user()->currentAccessToken()->delete();
 });
+Route::put('/updateProfilePs/{id}',[ProfileController::class,'updateProfilePassword']);
+Route::put('/editProfile/{id}',[ProfileController::class,'updateProfile']);

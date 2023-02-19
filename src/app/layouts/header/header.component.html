@@ -15,7 +15,7 @@
                         up</a>
                 </div>
                 <ng-template #elseBlock>
-                        <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation"
+                        <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation" 
                             class="text-gray-700 space-x-2 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
                             type="button"><img class="w-10 h-10 rounded-full" [src]="'/assets/imgs/' + user.picture"
                                 alt="Rounded avatar">
@@ -31,7 +31,7 @@
                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                 aria-labelledby="dropdownInformationButton">
                                 <li>
-                                    <a href="#"
+                                    <a href="#" [routerLink]="['/profile']"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
                                 </li>
                                 <li>

@@ -30,6 +30,7 @@ import { ReservationComponent } from './pages/reservation/reservation.component'
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GameDetailsComponent } from './components/Games/game-details/game-details.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +58,7 @@ import { GameDetailsComponent } from './components/Games/game-details/game-detai
     SignUpComponent,
     ReservationComponent,
     GameDetailsComponent,
+    ProfileComponent,
    
   ],
   imports: [
