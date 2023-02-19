@@ -16,4 +16,8 @@ class Reservation extends Model
         'payement',
         'instructions'
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
