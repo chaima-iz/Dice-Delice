@@ -26,6 +26,7 @@ export class ReservationComponent {
       payement: this.payement,
       instructions: this.instructions,
     };
+    console.log(reservationData);
     this.dataService.addReservation(reservationData)
       .subscribe(
         data => {
@@ -33,7 +34,7 @@ export class ReservationComponent {
           console.log('it works');
         },
         error => {
-          console.log("Doesn work");
+          console.log(error);
         }
       );
   }

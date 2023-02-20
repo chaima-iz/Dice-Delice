@@ -24,12 +24,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post("login",[UserController::class , 'login']);
 Route::post("signUp",[UserController::class , 'signUp']);
-Route::post("reservation",[ReservationController::class , 'store']);
+Route::post("addreservation",[ReservationController::class , 'store']);
 Route::get('/games',[GameController::class,'getGames']);
 Route::get('/reservations',[ReservationController::class,'getReservations']);
 Route::post('/logout', function (Request $request) {
-    //$request->session()->invalidate();
-    // or
      $request->user()->currentAccessToken()->delete();
 });
 Route::put('/updateProfilePs/{id}',[ProfileController::class,'updateProfilePassword']);

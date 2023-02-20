@@ -11,7 +11,7 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   addReservation(reservationData: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}/reservation`, reservationData);
+    return this.http.post(`${this.baseUrl}/addreservation`, reservationData);
   }
 
   listReservations(): Observable<any> {

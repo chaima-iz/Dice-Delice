@@ -16,18 +16,17 @@ class ReservationController extends Controller
             "end_time" => ["required"],
             "id_game" => ["required"],
             "payement" => ["required"],
-            "instructions" => ["required"],
             "id_user" => ["required"],
         ]);
-       
+       var_dump("test",$reservationData);
 
         $reservation = Reservation::create([
             "reservation_date" => $reservationData["reservation_date"],
             "start_time" => $reservationData["start_time"],
             "end_time" => $reservationData["end_time"],
-            "id_game" =>$reservationData["id_game"],
             "payement" => $reservationData["payement"],
             "instructions" => $reservationData["instructions"],
+            "id_game" =>$reservationData["id_game"],
             "id_user" => $reservationData['id_user'],
         ]);
         return response()->json(
