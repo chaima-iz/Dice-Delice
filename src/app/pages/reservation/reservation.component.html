@@ -28,11 +28,8 @@
         <label class="block text-gray-700 font-medium mb-2" for="game">
           Game
         </label>
-        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="game" name="game" [(ngModel)]="game">
-          <option value="">Select a game</option>
-          <option value="jeu1">Game 1</option>
-          <option value="jeu2">Game 2</option>
-          <option value="jeu3">Game 3</option>
+        <select  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="id_game" name="id_game" [(ngModel)]="id_game">
+          <option *ngFor="let g of games" value="{{g.id}}">{{g.name}}</option>
         </select>
       </div>
       <div>
