@@ -29,6 +29,7 @@ export class ReservationComponent {
     this.dataService.addReservation(reservationData)
       .subscribe(
         data => {
+          window.location.reload();
           console.log('it works');
         },
         error => {

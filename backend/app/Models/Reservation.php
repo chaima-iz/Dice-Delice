@@ -12,8 +12,13 @@ class Reservation extends Model
         'reservation_date',
         'start_time',
         'end_time',
-        'game',
+        'id_game',
         'payement',
-        'instructions'
+        'instructions',
+        'id_user'
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
