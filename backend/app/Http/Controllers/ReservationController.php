@@ -14,9 +14,10 @@ class ReservationController extends Controller
             "reservation_date" => ["required"],
             "start_time" => ["required"],
             "end_time" => ["required"],
-            "game" => ["required"],
+            "id_game" => ["required"],
             "payement" => ["required"],
-            "instructions" => ["required"]
+            "instructions" => ["required"],
+            "id_user" => ["required"],
         ]);
         
         
@@ -24,11 +25,15 @@ class ReservationController extends Controller
             "reservation_date" => $reservationData["reservation_date"],
             "start_time" => $reservationData["start_time"],
             "end_time" => $reservationData["end_time"],
-            "game" =>$reservationData["game"],
+            "id_game" =>$reservationData["id_game"],
             "payement" => $reservationData["payement"],
-            "instructions" => $reservationData["instructions"]
+            "instructions" => $reservationData["instructions"],
+            "id_user" => $reservationData['id_user'],
         ]);
-        return response($reservation , 201);
+        return response()->json(
+            ['message' => 'reservation saved', 'data' => $reservation],
+             200
+            );
         
     }
 
