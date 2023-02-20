@@ -24,11 +24,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post("login",[UserController::class , 'login']);
 Route::post("signUp",[UserController::class , 'signUp']);
+Route::post('/logout', function (Request $request) {
+    $request->user()->currentAccessToken()->delete();
+});
 Route::post("addreservation",[ReservationController::class , 'store']);
 Route::get('/games',[GameController::class,'getGames']);
-Route::get('/reservations',[ReservationController::class,'getReservations']);
-Route::post('/logout', function (Request $request) {
-     $request->user()->currentAccessToken()->delete();
-});
+Route::get('/reservations/{id_user}', [ReservationController::class, 'getReservations']);
 Route::put('/updateProfilePs/{id}',[ProfileController::class,'updateProfilePassword']);
 Route::put('/editProfile/{id}',[ProfileController::class,'updateProfile']);

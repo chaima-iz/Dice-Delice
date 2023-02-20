@@ -5,7 +5,6 @@
                 <img src="/assets/imgs/Logo_DD_dark.png" alt="" class="w-full">
             </a>
             <div class="flex items-center md:order-2">
-
                 <div *ngIf="!logged_in; else elseBlock"> 
                     <a [routerLink]="['/login']"
                         routerLinkActive="router-link-active"
@@ -16,10 +15,10 @@
                 </div>
                 <ng-template #elseBlock>
                         <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation" 
-                            class="text-gray-700 space-x-2 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                            class="text-gray-700 space-x-2 font-medium rounded-lg text-sm md:px-4 py-2.5 text-center inline-flex items-center"
                             type="button"><img class="w-10 h-10 rounded-full" [src]="'/assets/imgs/' + user.picture"
                                 alt="Rounded avatar">
-                            <p>{{user.username}}</p>
+                            <p class="hidden md:block">{{user.username}}</p>
                         </button>
                         <!-- Dropdown menu -->
                         <div id="dropdownInformation"

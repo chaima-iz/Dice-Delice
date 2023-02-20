@@ -14,9 +14,13 @@ export class DataService {
     return this.http.post(`${this.baseUrl}/addreservation`, reservationData);
   }
 
-  listReservations(): Observable<any> {
-    return this.http.get<any>(this.baseUrl + '/reservations');
-  }
+  // listReservations(): Observable<any> {
+  //   return this.http.get<any>(this.baseUrl + '/reservations');
+  // }
   
+  listReservations(userId: number): Observable<any> {
+    return this.http.get<any>(this.baseUrl + `/reservations/${userId}`, { params: { id_user: userId } });
+}
+
 
 }

@@ -8,18 +8,29 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class MyReservationsComponent {
   reservations:any;
+  user:any;
 
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.user=localStorage.getItem("user");
+    this.user=JSON.parse(this.user);
+    console.log(this.user.id);
     this.getReservations();
+    
   }
 
   getReservations() {
-    this.dataService.listReservations().subscribe((reservations) => {
-      this.reservations = reservations;
-      console.log(reservations);
+    this.dataService.listReservations(this.user.id).subscribe(
+    
+      res=>{
+        this.reservations = res;
+        console.log(res);
+      },
+      error=>{
+        console.log(error);
+      
     });
   }
 }
