@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 @Component({
   selector: 'app-reservation',
@@ -13,7 +13,9 @@ export class ReservationComponent {
   payement:any;
   instructions:any;
   
+  
   constructor(private dataService: DataService) {}
+  
   
   addReservation() {
     const reservationData = {
@@ -22,16 +24,15 @@ export class ReservationComponent {
       end_time: this.end_time,
       game: this.game,
       payement: this.payement,
-      instructions: this.instructions
+      instructions: this.instructions,
     };
-    
     this.dataService.addReservation(reservationData)
       .subscribe(
         data => {
           console.log('it works');
         },
         error => {
-          console.log('this doesnt work');
+          console.log("Doesn work");
         }
       );
   }

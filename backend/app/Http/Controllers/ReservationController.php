@@ -16,19 +16,20 @@ class ReservationController extends Controller
             "end_time" => ["required"],
             "game" => ["required"],
             "payement" => ["required"],
-            "instructions" => ["required"]
+            "instructions" => ["required"],
         ]);
-        
-        
+       
+
         $reservation = Reservation::create([
             "reservation_date" => $reservationData["reservation_date"],
             "start_time" => $reservationData["start_time"],
             "end_time" => $reservationData["end_time"],
             "game" =>$reservationData["game"],
             "payement" => $reservationData["payement"],
-            "instructions" => $reservationData["instructions"]
+            "instructions" => $reservationData["instructions"],
         ]);
         return response($reservation , 201);
+
         
     }
 
