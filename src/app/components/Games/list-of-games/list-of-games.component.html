@@ -3,10 +3,10 @@
         <!-- <h1 *ngFor="let game of games">{{ game.id }}</h1> -->
         <div class="flex gap-4 flex-wrap items-center ">
             <div *ngFor="let game of games | paginate: { itemsPerPage: 9, currentPage: p }">
-                <div *ngIf="searchText === '' || game.name.toLowerCase().includes(searchText)"
+                <div *ngIf="searchText === '' || game.name.toLowerCase().includes(searchText) || game.name.includes(searchText)"
                     class="md:w-[300px] bg-white border border-gray-200 rounded-lg shadow ">
                     <div>
-                        <img class="rounded-t-lg" src="/assets/imgs/picLogin.png" alt="game" />
+                        <img class="rounded-t-lg h-[300px]" src="/assets/imgs/{{game.picture}}" alt="game" />
                     </div>
                     <div class="p-5">
                         <div>
